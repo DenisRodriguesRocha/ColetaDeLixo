@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um site de exemplo do modulo de CSS">
+    <meta name="keywords" content="Agencia Digital, CSS, HTML">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <title>Coleta de Lixo</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Câmera Municipal de Cornélio Procópio</h1>
+        </div>
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Serviços</a>
+            <a id="botao" href="#">Fale Conosco</a>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="headline">
+            <br><br><br>
+            <h2 style="font-size:50px">Coleta de Lixo</h2>
+            <p>
+                Para compreender um pouco sobre o processo de reciclagem, o ideal é entender o objetivo de realizá-lo e
+                como as vantagens alcançadas beneficiam diretamente a todos. Reciclar nada mais é do que recuperar a
+                parte reutilizável de produtos consumidos para reintroduzi-los no ciclo de produção de sua origem ou
+                para a criação de outros objetos a partir dessa matéria-prima.
+            </p>
+            <p>
+                A relevância desse sistema é trazer o reaproveitamento e nova vida a objetos descartados, mas que ainda
+                poderiam ter utilidade para diversas outras atividades. Desta forma é possível reinserir um resíduo no
+                ciclo produtivo, gerando impacto positivo no meio ambiente. O processo de reciclagem é feito a partir da
+                coleta seletiva nos descartes.
+            </p>
+            <p>Confira aqui a frequência, horários e dias da coleta, tipos de lixo, dicas, projetos e muito mais. </p>
+            <h2>Cadastro de Dicas</h2>
+            <button id="addButton">Adicionar Dica</button>
+
+            <div class="horarios">
+                <h2>Horários de Coleta por Bairro</h2>
+                <button id="horariosButton">Ver Horários</button>
+                <ul id="horariosList"></ul>
+            </div>
+
+            <h2><br>Lista de Dicas</h2>
+            <input type="text" id="filterInput" placeholder="Filtrar por material">
+            <button id="filterButton">Filtrar</button>
+            <ul id="dicasList"></ul>
+
+            <div id="dialog" class="dialog hidden">
+                <h3>Adicionar Dica de Reciclagem</h3>
+                <label for="material">Material:</label>
+                <select id="material">
+                    <option value="plastico">Plástico</option>
+                    <option value="metal">Metal</option>
+                    <option value="papel">Papel</option>
+                    <option value="vidro">Vidro</option>
+                    <option value="organico">Orgânico</option>
+                </select>
+                <label for="dica">Dica:</label>
+                <textarea id="dica"></textarea>
+                <button id="saveButton">Salvar</button>
+                <button id="cancelButton">Cancelar</button>
+            </div>
+
+        </div>
+    </header>
+    <section>
+        <h2 style="color: green;">O que podemos fazer pelo ecossistena?</h2>
+        <div class="servicos">
+            <div class="card">
+                <img style="max-width: 16%;"
+                    src="https://static.vecteezy.com/system/resources/previews/014/630/759/original/recycling-icon-an-arrow-that-revolves-endlessly-reuse-concept-recycled-png.png">
+                <div class="card-text">
+                    <h3>Reutilizar</h3>
+                    <p>A reutilização, por sua vez, consiste em aproveitar a função de um produto ao máximo, mas sem
+                        que ele seja transformado em outro item de consumo.</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>Definição</h3>
+                    <p>Reutilizar um produto significa aplicá-lo novamente na mesma função ou em diversas outras
+                        possibilidades de uso, prolongando a vida útil deste produto. Por exemplo, podemos transformar
+                        potes e garrafas de plásticos em vasos para plantas ou em peças decorativas, um objeto que não é
+                        mais útil para alguém pode ser doado à outra pessoa, papéis usados podem ser transformados em
+                        blocos de rascunho e a água utilizada na lavagem de roupas pode ser aplicada para dar descarga
+                        nos vasos sanitários e na lavagem de quintais ou outros ambientes. Quando reutilizamos evitamos
+                        o descarte de um material e a compra de um novo produto. Portanto, esta prática reduz a
+                        quantidade de matéria-prima, água e energia necessária à fabricação de novos bens de consumo e
+                        diminui a poluição.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img style="max-width: 16%;"
+                    src="https://img.freepik.com/vetores-premium/reciclar-icon-ilustracao-vetorial-de-simbolo_77417-300.jpg">
+                <div class="card-text">
+                    <h3>Reciclar</h3>
+                    <p>Reciclar nada mais é do que recuperar a parte reutilizável de produtos consumidos para
+                        reintroduzi-los no ciclo de produção de sua origem ou para a criação de outros objetos a partir
+                        dessa matéria-prima.
+                    </p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>Definição</h3>
+                    <p>Reciclar é o processo de transformação de algo usado em algo totalmente novo. Ou seja, materiais
+                        que seriam descartados são reinseridos no ciclo produtivo e utilizados como matéria-prima para a
+                        fabricação de novos produtos. Vários materiais podem ser reciclados (papéis, plásticos, vidros,
+                        metais, pneus) e a separação do lixo é fundamental para que todo o processo de reciclagem
+                        aconteça. Por isso devemos separar o material reciclável do não reciclável, os recicláveis
+                        deverão ser encaminhados para empresas ou cooperativas especializadas. A reciclagem contribui
+                        para a geração de emprego e renda, prolonga a vida útil dos aterros sanitários e auxilia na
+                        preservação dos recursos naturais, embora seja um processo que consuma recursos.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img style="max-width: 16%;" src="https://cdn-icons-png.flaticon.com/512/580/580212.png">
+                <div class="card-text">
+                    <h3>Reduzir</h3>
+                    <p>Reduzir consiste em ações que reduzam o consumo de bens e serviços, visando à diminuição da
+                        geração de resíduos e consequente redução do desperdício.</p>
+                </div>
+                <div class="texto-oculto">
+                    <h3>Definição</h3>
+                    <p>Reduzir consiste em diminuir o consumo de bens e serviços. Isto significa que ao fazermos nossas
+                        compras devemos adquirir apenas produtos que são realmente necessários, eliminando a aquisição
+                        de bens supérfluos. Esta regra vale para todos os tipos de produtos (sacolas plásticas,
+                        alimentos, roupas, eletrodomésticos, eletrônicos, brinquedos). Além disso, devemos reduzir
+                        também o consumo de água, energia e combustíveis. Ao reduzir estamos poupando os recursos
+                        naturais, combatendo o desperdício e diminuindo a geração de lixo e a consequente poluição
+                        ambiental.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="logo-rodape">
+            <h1 class="agencia">Ainda com dúvidas?</h1>
+            <p style="color:white">Rua Paraíba, 189 - Centro - (43) 3133-3000<br>
+                Cornélio Procópio, PR - Cep: 86300-000<br>
+
+                E-mail: camaramunicipalcp@gmail.com<br>
+
+                Horário de atendimento:
+                das 08h30min às 17h
+
+            </p>
+        </div>
+        <b style="color:white;">© Todos os direitos reservados.</b>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
